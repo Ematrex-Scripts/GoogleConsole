@@ -35,8 +35,8 @@ def execute_script( body, header, datalists):
         print(f"Error executing script: {e.stderr}")
 
 if __name__ == "__main__":
-	domain = sys.argv[0]
-	from_email = sys.argv[1]
+    domain = sys.argv[0]
+    from_email = sys.argv[1]
     api_url = "http://"+domain+"/GoogleConsole"+"/"+from_email
 
     print("Starting the infinite loop...")

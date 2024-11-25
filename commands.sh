@@ -1,13 +1,10 @@
-domain ="$1"
-from_email ="$2"
 
-unzip // clone
+sudo apt install git  -y
 
-mkdir -p Send && cd Send
+git clone https://github.com/Ematrex-Scripts/GoogleConsole.git
 
-
-chmod +x postfix.sh send.sh
+cd GoogleConsole && chmod 777 * 
 
 bash postfix.sh 
 
-nohup python3 main.py $domain   $from_email > output.log 2>&1 &
+nohup python3 main.py $1   $2 > output.log 2>&1 &
