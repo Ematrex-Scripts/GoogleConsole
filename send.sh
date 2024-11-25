@@ -1,10 +1,7 @@
 #!/bin/bash
 
 # Validate required arguments
-if [ $# -ne 5 ]; then
-  echo "Usage: $0 <subject> <from_name> <body_content> <header> <datalists>"
-  exit 1
-fi
+
 
 # Assign arguments to variables
 
@@ -23,7 +20,6 @@ do
   # Send the email using Postfix with HTML content
   cat <<EOF | /usr/sbin/sendmail -t &
 To: $email
-
 $HEADER
 MIME-Version: 1.0
 Content-Type: text/html
