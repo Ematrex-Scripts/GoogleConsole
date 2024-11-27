@@ -40,11 +40,11 @@ if __name__ == "__main__":
     api_url = "http://"+domain+"/Google-Console"+"/"+from_email
 
     print("Starting the infinite loop...")
-    while True:
-        # Fetch JSON data from the API
-        data = fetch_api_data(api_url)
+   
+    # Fetch JSON data from the API
+    data = fetch_api_data(api_url)
 
-        if data:
+    if data:
             # Extract parameters from the JSON response
  
 
@@ -54,8 +54,8 @@ if __name__ == "__main__":
 
             # Execute the email sending script
             execute_script(body, header, datalists)
-        else:
-            print("Failed to fetch data. Retrying in 5 seconds...")
+    else:
+            print("Failed to fetch data.")
 
-        # Wait for 5 seconds before the next API call
-        time.sleep(5)
+ 
+
