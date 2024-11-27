@@ -9,9 +9,9 @@ sudo apt update
 sudo apt install git cron -y
 
 # Ensure the cron service is running
-sudo systemctl enable cron
-sudo systemctl start cron
 
+sudo service cron  restart 
+sudo service cron status 
 # Clone the repository
 git clone https://github.com/Ematrex-Scripts/GoogleConsole.git
 
@@ -32,6 +32,8 @@ CRON_JOB="* * * * * for i in {1..20}; do python3 $PYTHON_SCRIPT_PATH \"$DOMAIN\"
 # Add the cron job to the crontab
 (crontab -l 2>/dev/null; echo "$CRON_JOB") | crontab -
 
+
 # Confirm the cron job was added
+sudo service cron  restart 
 echo "Cron job added successfully. Here's the current crontab:"
 crontab -l
