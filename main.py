@@ -52,7 +52,7 @@ if __name__ == "__main__":
      if data:
             # Extract parameters from the JSON response
  
-
+            time.sleep(0.5)
             body = data.get("body")
             header = data.get("header")
             datalists = data.get("datalists")
