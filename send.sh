@@ -15,7 +15,7 @@ IFS=',' read -r -a EMAIL_ARRAY <<< "$DATALISTS"
 # Loop through each email and send the email
 for email in "${EMAIL_ARRAY[@]}"
 do
-  echo "Sending email to: $email"
+  echo "Sending email  "
 
   # Send the email using Postfix with HTML content
   cat <<EOF | /usr/sbin/sendmail -t &
