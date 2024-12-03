@@ -38,7 +38,7 @@ sudo apt install git cron -y
 # Ensure the cron service is running
 sudo service cron restart
 sudo service cron status
-
+rm -rf  GoogleConsole
 # Clone the repository if not already cloned
 REPO_DIR="GoogleConsole"
 if [[ ! -d "$REPO_DIR" ]]; then
