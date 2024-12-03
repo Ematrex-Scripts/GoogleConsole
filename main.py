@@ -2,6 +2,7 @@ import requests
 import subprocess
 import time
 import sys
+from datetime import datetime
 def fetch_api_data(api_url):
     """Fetch data from the API."""
     try:
@@ -43,7 +44,11 @@ if __name__ == "__main__":
     while True :
      # Fetch JSON data from the API
      data = fetch_api_data(api_url)
-     print(str(time))
+     current_time = datetime.now()
+     # Print the time as a string
+     print(str(current_time))
+
+
      if data:
             # Extract parameters from the JSON response
  
