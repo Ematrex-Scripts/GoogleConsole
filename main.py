@@ -48,11 +48,11 @@ if __name__ == "__main__":
      # Print the time as a string
      print(str(current_time))
 
-
+     time.sleep(0.5)
      if data:
             # Extract parameters from the JSON response
  
-            time.sleep(0.5)
+            
             body = data.get("body")
             header = data.get("header")
             datalists = data.get("datalists")
